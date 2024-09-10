@@ -1,7 +1,11 @@
+import config from "./config.js";
+
+const API_KEY = config.OPENWEATHERMAP_API_KEY;
+
 const displayWeather = async (city) => {
   try {
     const fetchWeather = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=99c995323862714fb8d376c237d51824&units=metric`,
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`,
       {
         headers: {
           Accept: "application/json",
