@@ -32,7 +32,6 @@ Check out the live demo: [Weather App](https://weather-app-three-orcin-27.vercel
 
 - `index.html`: Contains the structure of the web page
 - `app.js`: Handles the weather data fetching, display logic, and user interactions
-- `styles.css`: Contains custom styles for the application
 
 ## Setup
 
