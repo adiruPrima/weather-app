@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        margin: 0;
+        /* background-image: url("your-image-url.jpg"); */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .bg-default {
+        background-color: aliceblue;
+      }
+      .bg-rain {
+        background-image: url("https://images8.alphacoders.com/362/362049.jpg");
+      }
+      .bg-snow {
+        background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1e2d799c-9786-43bb-8e1e-6fe964950e43/d4fe2k2-d2f5dca0-0824-4ba2-9119-21cb3c982ae4.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzFlMmQ3OTljLTk3ODYtNDNiYi04ZTFlLTZmZTk2NDk1MGU0M1wvZDRmZTJrMi1kMmY1ZGNhMC0wODI0LTRiYTItOTExOS0yMWNiM2M5ODJhZTQuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.epbiPlMVT3WxGMd6OT2FFHmOEOlW3qNZbquL78zmgrs");
+      }
+      .bg-clear {
+        background-image: url("https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?cs=srgb&dl=pexels-francesco-ungaro-281260.jpg&fm=jpg");
+      }
+      .bg-clouds {
+        background-image: url("https://gingermonkey.com.au/cdn/shop/products/Cloudy_Night_SMALL_2048x.jpg?v=1538052354");
+      }
+      .bg-thunderstorm {
+        background-image: url("https://images.unsplash.com/photo-1537210249814-b9a10a161ae4?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHN0b3JtfGVufDB8fDB8fHww");
+      }
+      .bg-mist {
+        background-image: url("https://images.pexels.com/photos/4045726/pexels-photo-4045726.jpeg");
+      }
+      .container-card {
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 3rem;
+      }
+    </style>
+  </head>
+  <body class="bg-default">
+    <div class="container-card container my-5 p-5">
+      <div class="container-fluid w-50">
+        <form class="d-flex" role="search">
+          <input
+            id="citySearch"
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-info" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+      <h1 id="city" class="text-center mt-5 mb-3">Jakarta</h1>
+      <div id="weatherInfo" class="container-fluid text-center mb-5">
+        <img
+          id="icon"
+          src="http://openweathermap.org/img/wn/10d@4x.png
+        "
+          alt="status icon"
+        />
+        <h2 id="status">Rain</h2>
+        <p id="description">moderate rain</p>
+      </div>
+      <div id="tempInfo" class="text-center">
+        <h3 id="temp" class="mb-3">28°C</h3>
+        <div class="container-fluid d-flex justify-content-sm-around">
+          <div>
+            <p class="text-primary"><strong>Lows</strong></p>
+            <p>27.4°C</p>
+          </div>
+          <div>
+            <p class="text-danger"><strong>Highs</strong></p>
+            <p>28.9°C</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- App js -->
+    <script src="app.js"></script>
+  </body>
+</html>
