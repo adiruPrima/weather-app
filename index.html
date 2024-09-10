@@ -28,7 +28,7 @@
         background-repeat: no-repeat;
       }
       .bg-default {
-        background-color: aliceblue;
+        background-color: rgb(116, 131, 144);
       }
       .bg-rain {
         background-image: url("https://images8.alphacoders.com/362/362049.jpg");
@@ -48,6 +48,9 @@
       .bg-mist {
         background-image: url("https://images.pexels.com/photos/4045726/pexels-photo-4045726.jpeg");
       }
+      .bg-night {
+        background-image: url("https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?cs=srgb&dl=pexels-kaip-1341279.jpg&fm=jpg");
+      }
       .container-card {
         background-color: rgba(255, 255, 255, 0.7);
         border-radius: 3rem;
@@ -57,43 +60,30 @@
   <body class="bg-default">
     <div class="container-card container my-5 p-5">
       <div class="container-fluid w-50">
-        <form class="d-flex" role="search">
+        <div class="d-flex">
           <input
             id="citySearch"
             class="form-control me-2"
-            type="search"
+            type="text"
             placeholder="Search"
             aria-label="Search"
           />
-          <button class="btn btn-outline-info" type="submit">
+          <!-- button type must be "button" not "submit" -->
+          <button
+            id="displayWeather"
+            class="btn btn-outline-info"
+            type="button"
+          >
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
-        </form>
-      </div>
-      <h1 id="city" class="text-center mt-5 mb-3">Jakarta</h1>
-      <div id="weatherInfo" class="container-fluid text-center mb-5">
-        <img
-          id="icon"
-          src="http://openweathermap.org/img/wn/10d@4x.png
-        "
-          alt="status icon"
-        />
-        <h2 id="status">Rain</h2>
-        <p id="description">moderate rain</p>
-      </div>
-      <div id="tempInfo" class="text-center">
-        <h3 id="temp" class="mb-3">28°C</h3>
-        <div class="container-fluid d-flex justify-content-sm-around">
-          <div>
-            <p class="text-primary"><strong>Lows</strong></p>
-            <p>27.4°C</p>
-          </div>
-          <div>
-            <p class="text-danger"><strong>Highs</strong></p>
-            <p>28.9°C</p>
-          </div>
         </div>
       </div>
+      <!-- city name -->
+      <h1 id="city" class="text-center mt-5 mb-3"></h1>
+      <!-- weather status block -->
+      <div id="weatherInfo" class="container-fluid text-center mb-5"></div>
+      <!-- temperature block -->
+      <div id="tempInfo" class="text-center"></div>
     </div>
 
     <!-- Bootstrap script -->
